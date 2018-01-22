@@ -6,7 +6,7 @@ import {
   THUMB_DOWN_COMMENT
 } from "./actions";
 
-function reducer(state = [], action) {
+function comments(state = [], action) {
   switch (action.type) {
     case ADD_COMMENT:
       return [{
@@ -29,7 +29,7 @@ function reducer(state = [], action) {
                         ? {id: comment.id, votes: comment.votes +1}
                         : comment);
 
-    case THUMB_UP_COMMENT:
+    case THUMB_DOWN_COMMENT:
     return state.map(comment => comment.id === action.id
                     ? {id: comment.id, votes: comment.votes -1}
                     : comment);
