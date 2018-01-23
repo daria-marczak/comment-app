@@ -28,16 +28,18 @@ export const removeComment = (id) => {
   }
 };
 
-export const thumbsUp = (id) => {
+export const thumbsUp = (id, text) => {
   return {
     type: THUMB_UP_COMMENT,
-    id
+    id,
+    text
   }
 };
 
-export const thumbsDown = (id) => {
+export const thumbsDown = (id, text) => {
   return {
     type: THUMB_DOWN_COMMENT,
-    id
+    id,
+    text
   }
 };
